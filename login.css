@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('images/AdobeStock_429356296.jpeg') center/cover no-repeat;
+    background: url('AdobeStock_429356296.jpeg') center/cover no-repeat;
 }
 .wrapper {
     position: relative;
