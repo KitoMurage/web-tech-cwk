@@ -1,0 +1,356 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navigation{
+    background: #ebebeb;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+
+}
+
+
+#logo{
+    background-color: #141414;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+.fa-solid fa-mountain{
+    margin-right: 0.5rem;
+}
+
+.navigation_menu{
+    display: flex;
+    align-items: center;
+    list-style:  none;
+    text-align: center;
+}
+
+.item {
+    height: 80px;
+}
+
+.links{
+    color: #141414;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.navbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background-color: #6f00ff;
+    color: #fff;
+}
+
+.navbutton:hover {
+    background-color:#00b7ff; 
+    transition: all 0.3s ease-in;
+    
+}
+
+
+.links:hover{
+    color: #6f00ff;
+    transition: all 0.2s ease-in;
+}
+@media screen and (min-width: 961px) {
+    .toggle {
+        display: none;
+    }
+}
+@media screen and (max-width: 960px) {
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+    .navigation_menu{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background:#ebebeb;
+    }
+
+    .navigation_menu.active{
+        background: #ebebeb;
+        top:100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+
+    }
+
+    #logo{
+        padding-left: 25px;
+    }
+    .toggle .bar{
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3 ease-in-out;
+        background: #ebebeb;
+    }
+
+    .item{
+        width: 100%;
+    }
+    .links{
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+    #menu{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+    .navbar_btn{
+        padding-bottom: 2rem;
+    }
+
+    .navbutton{
+        display: flex;
+        justify-content: center ;
+        align-items: center;
+        width: 50%;
+        height: 50px;
+        margin: 0;
+    }
+
+    .toggle .bar{
+        display: block;
+        cursor: pointer;
+    }
+   
+    #menu.is-active .bar:nth-child(2){
+       opacity: 0; 
+    }
+    #menu.is-active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg); 
+     }
+     #menu.is-active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg); 
+     }
+}
+
+
+
+.about {
+    clear: both;
+}
+.button {
+    background-color: #6f00ff;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
+    cursor: pointer;
+}
+.button:hover {
+    background-color:#00b7ff; 
+    transition: all 0.3s ease-in;
+    
+}
+
+
+
+.container {
+    position: relative;
+    background-color: #ebebeb;
+}
+
+.main_text {
+    position: absolute;
+    left: 50%; 
+    transform: translate(-50%, 20%); 
+    text-align: center;
+    color: #ffffff;
+    z-index: 2;
+    font-size: 2rem;
+}
+@media screen and (max-width: 800px) {
+    .main_text {
+        left: 50%; 
+        transform: translate(-50%, 20%); 
+        font-size: 1.1rem; 
+    }
+    .button {
+        padding: 8px 16px;
+        font-size: 14px; /* Adjust button font size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main_text {
+        left: 50%; 
+        transform: translate(-50%, 20%); 
+        font-size: 0.7rem; 
+    }
+    .button {
+        padding: 6px 12px;
+        font-size: 10px; /* Adjust button font size for smaller screens */
+    }
+}
+
+.image {
+    position: relative;
+   
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+#about {
+    color: #141414;
+    background-color:  #ebebeb;
+    margin-top: 50px; 
+    padding: 0 50px;
+}
+
+.contacts {
+    color: #ebebeb;
+    background-color:  #393939;
+    margin-top: 50px; 
+    padding: 0 50px;
+}
+.container2 {
+    position: relative;
+    background-color: #000000;
+    color: #ebebeb;
+    height: 100%;
+    z-index: 999;
+    font-size: 1.5rem;
+    
+}
+.main{
+    z-index: 999;
+}
+
+.main_workout{
+    display: flex;
+    align-items: center;
+    list-style:  none;
+    text-align: center;
+}
+
+.wlinks{
+    color: #ebebeb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 15rem;
+    height: 160%;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 100;
+}
+
+.wlinks:hover{
+    color: #6f00ff;
+    transition: all 0.2s ease-in;
+}
+.image2{
+scale: 50%;
+transform: translate(500px, -800px);
+
+    
+}
+
+
+.container3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 2000px;
+    margin: 0 auto;
+    background-color: #000000;
+    color: #ebebeb;
+    min-height: 100vh; 
+}
+
+.main3 {
+    flex: 1;
+}
+
+.image-container {
+    float: right;
+    width: 55%; 
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
