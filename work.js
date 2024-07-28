@@ -6,9 +6,9 @@ const iconNext = document.querySelector('.icon-next');
 
 function switchBackgroundImage(link) {
     if (link === bodybuildingLink) {
-        wrapper.style.backgroundImage = "url('images/hypertrophyimg.jpg')";
+        wrapper.style.backgroundImage = "url('hypertrophyimg.jpg')";
     } else if (link === powerliftingLink) {
-        wrapper.style.backgroundImage = "url('images/strength.jpg')";
+        wrapper.style.backgroundImage = "url('strength.jpg')";
     }
 }
 
